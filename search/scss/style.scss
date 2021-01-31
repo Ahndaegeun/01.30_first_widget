@@ -1,0 +1,30 @@
+.body__container {
+  height: 100vh;
+  background: #e7e4db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  section {
+    display: flex;
+    i {
+      background: #f35854;
+      color: #ffffff;
+      font-size: 3em;
+      padding: 30px;
+    }
+    form {
+      input {
+        height: 100%;
+        width: 480px;
+        padding: 30px;
+        font-size: 32px;
+        outline: none;
+        border: none;
+        letter-spacing: 0.1em;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 1px 1px 2px #000000;
+      }
+    }
+  }
+}

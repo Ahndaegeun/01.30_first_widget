@@ -1,0 +1,97 @@
+.body__container {
+  height: 100vh;
+  background: #e5e2d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  section {
+    position: relative;
+    width: 20vw;
+    box-shadow: 1px 2px 5px #000000;
+    .section-header {
+      background: #ffffff;
+      box-sizing: border-box;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      .section-date {
+        color: #adadad;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          font-size: 32px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 28px;
+        }
+      }
+      .prev-btn,
+      .next-btn {
+        color: #f35854;
+        i {
+          font-size: 4em;
+        }
+      }
+      [class$="btn"]:hover {
+        cursor: pointer;
+      }
+    }
+    .section-list {
+      height: 30vh;
+      background: #f35854;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ul {
+        width: 80%;
+        height: 80%;
+        display: grid;
+        grid-auto-rows: 30px;
+        overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera*/
+        }
+        li {
+          color: #ffffff;
+          width: 100%;
+          border-bottom: 1px solid #ff9595;
+          margin-bottom: 5px;
+          .cancle-btn.on {
+            background: none;
+            color: #ffffff;
+            font-size: 1em;
+          }
+          .cancle-btn.on:hover {
+            cursor: pointer;
+          }
+          .cancle-btn.off {
+            background: none;
+          }
+        }
+      }
+    }
+    .btn-group {
+      [class$="btn"] {
+        background: #f35854;
+        color: #ffffff;
+        position: absolute;
+        bottom: 10px;
+        font-size: 1.2em;
+      }
+      [class$="btn"]:hover {
+        cursor: pointer;
+      }
+      .mail-btn {
+        left: 10px;
+      }
+      .setting-btn {
+        right: 10px;
+      }
+    }
+  }
+}

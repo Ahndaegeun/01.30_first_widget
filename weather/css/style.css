@@ -1,0 +1,1 @@
+.body__container{background:#e6e3da;height:100vh;display:flex;justify-content:center;align-items:center}.body__container section{width:40vw;height:35vh;border:1px solid red;display:flex;justify-content:space-around}.body__container section .date{display:flex;justify-content:space-between}
