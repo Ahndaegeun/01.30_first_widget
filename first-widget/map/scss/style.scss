@@ -1,0 +1,59 @@
+@import "_mixin";
+
+.body__container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e9e6dd;
+  section {
+    box-shadow: 0 0 5px #888888;
+    width: 40vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    #map {
+      width: 100%;
+      height: 90%;
+      background: chartreuse;
+    }
+    .search {
+      width: 100%;
+      form {
+        display: flex;
+        button {
+          background: #f35854;
+          padding: 20px;
+          &:hover {
+            cursor: pointer;
+          }
+          i {
+            font-size: 2em;
+            color: #ffffff;
+          }
+        }
+        input {
+          width: 100%;
+          outline: none;
+          border: none;
+          padding: 10px 20px;
+          font-size: 24px;
+          &::placeholder {
+            color: #999999;
+          }
+        }
+      }
+    }
+    .btn-group {
+      .zoom {
+        @include button-design(1.2em);
+        left: 10px;
+      }
+      .how-to-move {
+        @include button-design(2em);
+        right: 10px;
+      }
+    }
+  }
+}

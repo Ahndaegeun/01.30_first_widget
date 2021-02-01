@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>map</title>
+
+  <link rel="stylesheet" href="../player/css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+<body>
+<div class="body__container">
+  <section>
+    <div id="map"></div>
+    <div class="search">
+      <form action="/" method="get">
+        <button type="button"><i class="fa fa-search"></i></button>
+        <input type="search" placeholder="SEARCH LOCATION...">
+      </form>
+    </div>
+    <div class="btn-group">
+      <div class="zoom">
+        <button class="plus" type="button"><i class="fa fa-plus"></i></button>
+        <button class="minus" type="button"><i class="fa fa-minus"></i></button>
+      </div>
+      <div class="how-to-move">
+        <button class="walk" type="button"><i class="fa fa-male"></i></button>
+        <button class="car" type="button"><i class="fa fa-car"></i></button>
+        <button class="subway" type="button"><i class="fa fa-subway"></i></button>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  function initMap() {
+    const myLatLng = {
+      lat: 37.782293,
+      lng: -122.391240
+    }
+    const map = new google.maps.Map(
+      document.getElementById('map'),
+      {
+        center: myLatLng,
+        scrollwheel: true,
+        zoom: 18
+      }
+    );
+    const marker = new google.maps.Marker({
+      postition: myLatLng,
+      map: map,
+      title: 'GitHub'
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
+</body>
+</html>

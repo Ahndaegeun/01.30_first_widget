@@ -1,0 +1,18 @@
+@mixin button-design ($fontsize) {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  top: 10px;
+  button {
+    background: #f35854;
+    &:hover {
+      cursor: pointer;
+    }
+    i {
+      color: #ffffff;
+      padding: 5px;
+      font-size: $fontsize;
+    }
+  }
+}
