@@ -1,0 +1,105 @@
+@import "_mixin";
+
+.body__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #dce1e7;
+  section {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 120px;
+    position: relative;
+    h1 {
+      font-size: 34px;
+      color: #666666;
+      margin-bottom: 30px;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      label {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #999999;
+        &:nth-child(2) {
+          margin-bottom: 30px;
+        }
+        input {
+          outline: none;
+          box-sizing: border-box;
+          width: 100%;
+          margin-top: 10px;
+          font-size: 18px;
+          color: #000000;
+          padding: 5px 10px;
+          border: 1px solid #c7c7c7;
+          border-radius: 5px;
+        }
+      }
+      button {
+        width: 100%;
+        outline: none;
+        border: none;
+        background: #49a0d4;
+        color: #ffffff;
+        position: relative;
+        padding: 15px 0;
+        border-radius: 50px;
+        box-shadow: 0 5px 10px #888888 ;
+        &:hover {
+          cursor: pointer;
+        }
+        i {
+          position: absolute;
+          right: 20px;
+        }
+      }
+    }
+    a {
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 20px;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      a {
+        &:nth-child(1) {
+          @include sns-btn(#55acef);
+        }
+        &:last-child {
+          @include sns-btn(#3b5999);
+        }
+      }
+    }
+    .sign-in-footer {
+      //transform: translateY(100%);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #464553;
+      color: #999999;
+      padding: 40px 0;
+      box-shadow: 0 15px 10px -5px #666666;
+      a {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@mixin sns-btn($background) {
+  padding: 15px 40px;
+  color: #ffffff;
+  background: $background;
+  font-size: 18px;
+  border-radius: 50px;
+  i {
+    margin-right: 5px;
+  }
+}
