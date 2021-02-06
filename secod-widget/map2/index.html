@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map</title>
+
+  <link rel="stylesheet" href="../signup/css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="body__container">
+  <section>
+    <map id="map"></map>
+    <div class="user-info">
+      <h1>Kauf Shop</h1>
+      <p>
+        1825 Foster Ave APT 5F.
+        Brooklyn, NY
+      </p>
+      <a href="tel:+1 844 7085422">+1 844 7085422</a>
+      <a href="mailto:info@kauf.com">info@kauf.com</a>
+      <div class="sns-link">
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  function initMap() {
+    const myLatLng = {
+      lat: 37.55385025667668,
+      lng: 126.981049525555596
+    }
+    const map = new google.maps.Map(
+      document.getElementById('map'),
+      {
+        center: myLatLng,
+        scrollwheel: true,
+        zoom: 18
+      }
+    );
+    const marker = new google.maps.Marker({
+      postition: myLatLng,
+      map: map,
+      title: 'Hi'
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
+</body>
+</html>
