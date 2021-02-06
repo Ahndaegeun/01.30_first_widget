@@ -1,0 +1,35 @@
+.body__container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dce1e7;
+  section {
+    width: 580px;
+    position: relative;
+    background: #464553;
+    color: #ffffff;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    overflow: hidden;
+    strong {
+      position: absolute;
+      font-size: 14px;
+      color: #999999;
+      top: 30px;
+      left: 50px;
+    }
+    .user-email {
+      padding: 50px;
+      letter-spacing: .1em;
+      color: #d1d1d1;
+    }
+    a {
+      padding: 50px;
+      background: #ef5b5b;
+    }
+  }
+}
