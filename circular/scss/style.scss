@@ -1,0 +1,105 @@
+@import "_variable";
+@import "_mixin";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.body__container {
+  position: relative;
+  & * {
+    font-family: $loboto;
+  }
+  header {
+    height: 80vh;
+    background: $horizontal-gradient;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    nav {
+      box-sizing: border-box;
+      padding: 20px 50px 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      color: $white;
+      .nav-logo {
+        font-size: 32px;
+        i {
+          margin-right: 5px;
+        }
+      }
+      .main-menu {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        li {
+          font-size: 18px;
+          font-weight: $thin;
+          a {
+            padding: 5px 10px;
+          }
+        }
+      }
+      .mail-btn {
+        outline: none;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        font-weight: $main;
+        i {
+          margin-right: 10px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .main-contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .title {
+        width: 50%;
+        color: #fff;
+        font-size: 64px;
+        font-weight: bold;
+        line-height: 1.25;
+        letter-spacing: .05em;
+        margin-bottom: 15px;
+      }
+      .description {
+        width: 45%;
+        color: $white;
+        font-size: 18px;
+        line-height: 1.25;
+        margin-bottom: 30px;
+      }
+      .link-group {
+        display: flex;
+        a {
+          &:nth-child(1) {
+            margin-right: 20px;
+            @include link-btn(#393682);
+          }
+          &:nth-child(2) {
+            @include link-btn(#fff);
+          }
+        }
+      }
+      img {
+        width: 300px;
+        transform: rotate(-25deg);
+        position: absolute;
+        right: 360px;
+        bottom: -50px;
+        background: linear-gradient(#5d93ff, #48cfff);
+        border-radius: 50px;
+        box-shadow: 3px 3px 5px #000;
+      }
+    }
+  }
+}

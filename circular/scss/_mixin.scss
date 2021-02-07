@@ -1,0 +1,15 @@
+@mixin link-btn($color) {
+  width: 200px;
+  border: none;
+  @if $color == #393682 {
+    color: #fff;
+  } @else {
+    color: #b973f7;
+  }
+  font-weight: 500;
+  padding: 10px 0;
+  background: $color;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+}
