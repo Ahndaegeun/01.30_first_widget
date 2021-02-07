@@ -1,0 +1,14 @@
+@mixin view-btn {
+  outline: none;
+  border: none;
+  color: $white;
+  background: $black;
+  padding: 10px 30px;
+  font-size: 22px;
+  font-weight: $main;
+  letter-spacing: .1em;
+  box-shadow: 0 10px 5px #13131a;
+  &:hover {
+    cursor: pointer;
+  }
+}
